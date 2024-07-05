@@ -40,7 +40,6 @@ class MulticastClient:
             packet = struct.pack("4sl", socket.inet_aton(self.multicast_group), socket.INADDR_ANY if self.network_interface is None else socket.inet_aton(self.network_interface))
         return packet
 
-
     def connect(self) -> Generator:
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
         if self.interface_ip is not None and self.multicast_group is not None:

@@ -19,7 +19,6 @@ class Socket_Clinet:
         self.logger.setLevel(logging_level)
         self.logger.info("Starting Multicast Client")
 
-
     def create_sender_socket(self):
         connection_sender = None
         if self.use_multicast:

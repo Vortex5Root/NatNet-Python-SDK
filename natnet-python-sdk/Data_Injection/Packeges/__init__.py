@@ -75,6 +75,7 @@ class Struct_Socket_Data:
         data["RigidBodies"], index = self.unpack_RigidBody(data, index+1, data["nRigidBodies"])
         data["nSkeletons"] = self.struct_tool.unpack_int_value(data[index])
         data["Skeletons"], index = self.unpack_RigidBody(data, index+1, data["nSkeletons"])
+        
 '''
 
 '''
